@@ -28,13 +28,13 @@ public class Cache {
         this.cache=temp;
     }
     
-    public ArrayList loadFile(int taillebloc,int puiss) throws FileNotFoundException{
+    public ArrayList loadFile(int taillebloc,int puiss,String f) throws FileNotFoundException{
         
         this.tailleBloc=taillebloc;
         this.puiss_l=puiss;
         
         Scanner input = new Scanner(System.in);
-        File file = new File("matrice10.txt");
+        File file = new File(f);
         
         int succes =0;
         int echecs=0;

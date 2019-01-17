@@ -18,10 +18,17 @@ public class ArchiCacheDirect {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws FileNotFoundException {
-        Cache cache = new Cache(8);
-        System.out.println(cache.loadFile(32,3));
-        int nblignes=2*2;
-        int[] min ={};;
+        for(int i=2; i<8 ;i++){
+            Cache cache = new Cache((int) Math.pow(2, i));
+            System.out.print(i+" : ");
+            System.out.println(cache.loadFile(32,i,"matrice10.txt"));
+        }
+        System.out.println("");
+        for(int i=2; i<8 ;i++){
+            Cache cache = new Cache((int) Math.pow(2, i));
+            System.out.print(i+" : ");
+            System.out.println(cache.loadFile(32,i,"alea10.txt"));
+        }
     }
     
 }
